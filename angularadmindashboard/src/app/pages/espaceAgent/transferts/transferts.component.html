@@ -1,0 +1,36 @@
+<main id="main" class="main">
+
+  <section class="section">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Les transferts</h5>
+
+            <table class="table datatable" *ngIf="transferts">
+              <thead>
+              <tr>
+                <th scope="col">cin</th>
+                <th scope="col">montant</th>
+                <th scope="col">nom</th>
+                <th scope="col">prenom</th>
+                <th scope="col">date</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let transfert of transferts">
+                <td>{{transfert.cin}}</td>
+                <td>{{transfert.montant}}</td>
+                <td>{{transfert.nom}}</td>
+                <td>{{transfert.prenom}}</td>
+                <td>{{transfert.date | date}}</td>
+              </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

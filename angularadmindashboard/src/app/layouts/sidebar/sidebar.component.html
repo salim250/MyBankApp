@@ -1,0 +1,22 @@
+<aside id="sidebar" class="sidebar">
+  <ul class="sidebar-nav" id="sidebar-nav">
+    <li class="nav-item"><a class="nav-link "  routerLink="/dashboard"> <i class="bi bi-bar-chart-line"></i> <span>tableau de bord</span></a></li>
+    <li class="nav-item"><a class="nav-link " routerLink="/user-profile"> <i class="bi bi-person-circle"></i> <span>profile</span>
+    </a></li>
+    <li class="nav-item"><a class="nav-link " *ngIf="UserRole('client')" routerLink="/virementClient"> <i class="bi bi-currency-exchange"></i><span>Virement</span> </a></li>
+    <li class="nav-item"><a class="nav-link " *ngIf="UserRole('client')" routerLink="/Demande"> <i class="bi bi-credit-card"></i><span>demande chequier ou carte banquaire</span> </a></li>
+    <li class="nav-item"><a class="nav-link " *ngIf="UserRole('client')" routerLink="/transfert"> <i class="bi bi-arrow-left-right"></i><span>transfert</span> </a></li>
+    <li class="nav-item"><a class="nav-link " *ngIf="UserRole('client')" routerLink="/Extrait"> <i class="bi bi-receipt"></i><span>extrait</span> </a></li>
+
+    <li class="nav-item"><a class="nav-link " *ngIf="UserRole('admin')" [routerLink]="['liste','client']"> <i class="bi bi-people"></i><span>client</span> </a></li>
+    <li class="nav-item"><a class="nav-link " *ngIf="UserRole('admin')" [routerLink]="['liste','agent']"> <i class="bi bi-people-fill"></i><span>agent</span> </a></li>
+    <li class="nav-item"><a class="nav-link " *ngIf="UserRole('admin')" [routerLink]="['liste','chef']"> <i class="bi bi-person-lines-fill"></i><span>chef d'agence</span> </a></li>
+    <li class="nav-item"><a class="nav-link " *ngIf="UserRole('admin')" href="#"> <i class="bi bi-chat-dots-fill"></i><span>messagerie</span> </a></li>
+
+    <li class="nav-item"><a class="nav-link " *ngIf="UserRole('agent') || UserRole('chef')" routerLink="/transferts"> <i class="bi bi-view-list"></i><span>consulter transferts</span> </a></li>
+    <li class="nav-item"><a class="nav-link " *ngIf="UserRole('agent') || UserRole('chef')" routerLink="/historiqueTransferts"> <i class="bi bi-window"></i><span>historique des transferts</span> </a></li>
+    <li class="nav-item"><a class="nav-link " *ngIf="UserRole('agent') || UserRole('chef')" routerLink="/MAJDemande"> <i class="bi bi-wallet"></i><span>Mise à jour état chequiers/cartes</span> </a></li>
+    <li class="nav-item"><a class="nav-link " *ngIf="UserRole('agent') || UserRole('chef')" routerLink="/traiterDemande"> <i class="bi bi-wallet"></i><span>Traiter demande chequier/carte bancaire</span> </a></li>
+
+  </ul>
+</aside>

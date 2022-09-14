@@ -1,0 +1,52 @@
+<main id="main" class="main">
+  <div class="alert alert-primary" role="alert" *ngIf="show">
+    {{message}}
+  </div>
+  <section class="section">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Demande d'un chequier</h5>
+            <form>
+              <fieldset class="row mb-3">
+                <legend class="col-form-label">Demande d'un chequiers</legend>
+                <div class="col-sm-10">
+                  <div class="form-check"> <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" (change)="onChangeChequier($event)" value="25"> <label class="form-check-label" for="gridRadios1"> 25 chequiers </label></div>
+                  <div class="form-check"> <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" (change)="onChangeChequier($event)" value="30"> <label class="form-check-label" for="gridRadios2"> 30 chequiers </label></div>
+
+                </div>
+              </fieldset>
+              <input type="submit" class="btn btn-primary" value="Valider" (click)="demandeChequier()" style="margin-left: 100px">
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Demande d'une carte bancaire</h5>
+
+            <form>
+              <fieldset class="row mb-4">
+                <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+                <div class="col-sm-10">
+                  <div class="form-check"> <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="CIB" (change)="onChangeCarte($event)"> <img src="assets/img/carte-cib.png" style="height: 40px"></div>
+                  <div class="form-check"> <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="SAWEH" (change)="onChangeCarte($event)"> <img src="assets/img/saweh.jpg" style="height: 40px"></div>
+                  <div class="form-check disabled"> <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios" value="GOLD_MASTERCARD" (change)="onChangeCarte($event)"> <img src="assets/img/MasterCard_Gold_LR.jpg" style="height: 40px"></div>
+                </div>
+              </fieldset>
+              <input type="submit" class="btn btn-primary" value="Valider" (click)="demandeCarte()" style="margin-left: 100px">
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</main>

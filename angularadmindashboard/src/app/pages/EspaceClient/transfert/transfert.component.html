@@ -1,0 +1,30 @@
+<main id="main" class="main">
+  <div class="alert alert-primary" role="alert" *ngIf="show">
+    {{message}}
+  </div>
+  <section class="section">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">General Form Elements</h5>
+            <form>
+              <div class="row mb-3">
+                <label for="inputCompte" class="col-sm-2 col-form-label">Compte à créditer</label>
+                <div class="col-sm-8"> <input type="text" [(ngModel)]="transfert.numeroCompte" name="numeroCompte" class="form-control"></div>
+              </div>
+              <div class="row mb-3">
+                <label for="inputMontant" class="col-sm-2 col-form-label">Montant</label>
+                <div class="col-sm-8"> <input type="text" [(ngModel)]="transfert.montant" name="montant" class="form-control"></div>
+              </div>
+              <input type="submit" class="btn btn-primary" value="Valider" (click)="addTransfert()" style="margin-left: 100px">
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</main>

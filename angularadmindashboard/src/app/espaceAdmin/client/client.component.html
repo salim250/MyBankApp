@@ -1,0 +1,37 @@
+<main id="main" class="main">
+  <input type="submit" class="btn btn-warning" value="Ajouter un nouveau {{this.role}}" (click)="addClient()">
+  <br>
+  <br>
+  <section class="section">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-body">
+
+            <table class="table datatable" *ngIf="users">
+              <thead>
+              <tr>
+                <th scope="col">nom</th>
+                <th scope="col">prenom</th>
+                <th scope="col">email</th>
+                <th scope="col">action</th>
+
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let user of users">
+                <td>{{user.nom}}</td>
+                <td>{{user.prenom}}</td>
+                <td>{{user.email}}</td>
+                <td><i class="bi bi-pencil-square" style="color: green" ></i> &nbsp;
+                  <i class="bi bi-trash" style="color: red"></i></td>
+              </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
