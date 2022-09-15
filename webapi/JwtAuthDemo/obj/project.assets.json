@@ -7615,11 +7615,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ASUS\\OneDrive\\Documents\\PFE_INES\\webapi\\JwtAuthDemo\\JwtAuthDemo.csproj",
+      "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\bankPFE\\PFE_Ines\\webapi\\JwtAuthDemo\\JwtAuthDemo.csproj",
       "projectName": "JwtAuthDemo",
-      "projectPath": "C:\\Users\\ASUS\\OneDrive\\Documents\\PFE_INES\\webapi\\JwtAuthDemo\\JwtAuthDemo.csproj",
+      "projectPath": "C:\\Users\\ASUS\\Desktop\\bankPFE\\PFE_Ines\\webapi\\JwtAuthDemo\\JwtAuthDemo.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ASUS\\OneDrive\\Documents\\PFE_INES\\webapi\\JwtAuthDemo\\obj\\",
+      "outputPath": "C:\\Users\\ASUS\\Desktop\\bankPFE\\PFE_Ines\\webapi\\JwtAuthDemo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config"

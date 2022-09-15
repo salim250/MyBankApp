@@ -28,13 +28,16 @@ namespace JwtAuthDemo.Controllers
         [AllowAnonymous]
         public IActionResult Get()
         {
-            List<Transfert> transferts = _context.Transferts.Include(x=>x.clientRecepteur).ToList();
+            List<Transfert> transferts = _context.Transferts.Include(x=>x.clientRecepteur)
+                .Include(x=>x.clientDebiteur)
+                .ToList();
             List<Object> trans = new List<object>();
             foreach (var obj in transferts)
             {
                 trans.Add(
                 new {
                     cin = obj.clientRecepteur.cin,
+                    RIBDebiteur = obj.clientDebiteur.NumeroCompte,
                     montant = obj.montant,
                     nom = obj.clientRecepteur.nom,
                     prenom = obj.clientRecepteur.prenom,

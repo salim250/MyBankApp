@@ -16,7 +16,6 @@
                 <th scope="col">nom</th>
                 <th scope="col">prenom</th>
                 <th scope="col">date</th>
-                <th scope="col">action</th>
               </tr>
               </thead>
               <tbody>
@@ -27,24 +26,10 @@
                 <td>{{transfert.nom}}</td>
                 <td>{{transfert.prenom}}</td>
                 <td>{{transfert.date | date}}</td>
-                <td><input type="submit" class="btn btn-primary"
-                           data-bs-toggle="modal" data-bs-target="#disabledAnimation" value="Valider"></td>
               </tr>
 
               </tbody>
             </table>
-            <div class="modal" id="disabledAnimation" tabindex="-1">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title">valider Transfert</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-footer"> <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Valider</button></div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

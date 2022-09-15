@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "X6xwHeX6UEQeXeuHWPRlQavsg6kqx7ZBee6DAIQXZmZfVj42xKQv2SSltTSgZRG2IwHciGp+Lh5X6tk9WySBtg==",
+  "dgSpecHash": "mIT3cnH7y3zpnJ3gC+5mwLpruq9f+YopI9OmukPbH7kr0pCgq0pPyxJ1+6fD4/hjIE3kZOYDQvqzLhUoElfFXg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ASUS\\OneDrive\\Documents\\PFE_INES\\webapi\\JwtAuthDemo\\JwtAuthDemo.csproj",
+  "projectFilePath": "C:\\Users\\ASUS\\Desktop\\bankPFE\\PFE_Ines\\webapi\\JwtAuthDemo\\JwtAuthDemo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\google.protobuf\\3.14.0\\google.protobuf.3.14.0.nupkg.sha512",

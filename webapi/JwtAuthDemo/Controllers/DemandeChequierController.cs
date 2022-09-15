@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -24,7 +25,22 @@ namespace JwtAuthDemo.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_context.DemandeChequiers.ToList());
+            List<DemandeChequier> demande = _context.DemandeChequiers.Include(x => x.client)
+                
+                .ToList();
+            List<Object> dem = new List<object>();
+            foreach (var obj in demande)
+            {
+                dem.Add(
+                    new {
+                        id = obj.Id,
+                        numero = obj.client.NumeroCompte,
+                        nombre = obj.nombre,
+                        etat = obj.etat,
+                        date = obj.dateDemande,
+                    });
+            }
+            return Ok(dem);
         }
 
         // GET api/<DemandeChequierController>/5
@@ -41,7 +57,7 @@ namespace JwtAuthDemo.Controllers
             DemandeChequier demandeChequier = new DemandeChequier();
             demandeChequier.client = _context.Client.Find(id);
             demandeChequier.dateDemande = DateTime.Now;
-            demandeChequier.etat = "En cours";
+            demandeChequier.etat = "En attente";
             demandeChequier.nombre = Int32.Parse(nombre);
             _context.DemandeChequiers.Add(demandeChequier);
             _context.SaveChanges();

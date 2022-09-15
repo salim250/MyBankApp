@@ -47,6 +47,7 @@ import { ExtraitComponent } from './pages/EspaceClient/extrait/extrait.component
 import { ClientComponent } from './espaceAdmin/client/client.component';
 import { TransfertsComponent } from './pages/espaceAgent/transferts/transferts.component';
 import { MAJDemandeComponent } from './pages/espaceAgent/majdemande/majdemande.component';
+import { HistoriqueTransfertComponent } from './espaceAgent/historique-transfert/historique-transfert.component';
 
 
 @NgModule({
@@ -93,7 +94,8 @@ import { MAJDemandeComponent } from './pages/espaceAgent/majdemande/majdemande.c
     ExtraitComponent,
     ClientComponent,
     TransfertsComponent,
-    MAJDemandeComponent
+    MAJDemandeComponent,
+    HistoriqueTransfertComponent
 
   ],
   imports: [

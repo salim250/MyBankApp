@@ -10,6 +10,7 @@
             <table class="table table-borderless datatable" *ngIf="listeCarte">
               <thead>
               <tr>
+                <th scope="col">Numero de compte</th>
                 <th scope="col">Date Demande</th>
                 <th scope="col">type</th>
                 <th scope="col">etat</th>
@@ -20,7 +21,8 @@
               <tbody>
               <tr *ngFor=" let carte of listeCarte">
 
-                <td>{{carte.dateDemande | date}}</td>
+                <td>{{carte.numero}}</td>
+                <td>{{carte.date | date}}</td>
                 <td>{{carte.type}}</td>
                 <td><span class="badge bg-{{color[carte.etat]}}">{{carte.etat}}</span></td>
                 <td><i class="bi bi-pencil-square" style="color: green" data-bs-toggle="modal" data-bs-target="#disabledAnimation" (click)="getTest('carte',carte.id,carte.etat)"></i> &nbsp;
@@ -45,8 +47,9 @@
             <table class="table table-borderless datatable" *ngIf="listeChequier">
               <thead>
               <tr>
+                <th scope="col">Numero de compte</th>
                 <th scope="col">Date Demande</th>
-                <th scope="col">type</th>
+
                 <th scope="col">nombre</th>
                 <th scope="col">action</th>
 
@@ -55,7 +58,8 @@
               <tbody>
               <tr *ngFor=" let chequier of listeChequier">
 
-                <td>{{chequier.dateDemande | date}}</td>
+                <td>{{chequier.numero}}</td>
+                <td>{{chequier.date | date}}</td>
                 <td>{{chequier.nombre}}</td>
                 <td><span class="badge bg-{{color[chequier.etat]}}">{{chequier.etat}}</span></td>
                 <td><i class="bi bi-pencil-square" style="color: green" data-bs-toggle="modal" data-bs-target="#disabledAnimation" (click)="getTest('chequier',chequier.id,chequier.etat)"></i> &nbsp;
@@ -72,7 +76,7 @@
                   <div class="modal-dialog">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title">Disabled Animation Modal</h5>
+                        <h5 class="modal-title">Mise à jour état</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <div class="row mb-3">

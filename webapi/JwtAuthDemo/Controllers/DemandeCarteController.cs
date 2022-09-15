@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -24,7 +25,22 @@ namespace JwtAuthDemo.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_context.DemandeCartes.ToList());
+            List<DemandeCarte> demande = _context.DemandeCartes.Include(x => x.client)
+                
+                .ToList();
+            List<Object> dem = new List<object>();
+            foreach (var obj in demande)
+            {
+                dem.Add(
+                    new {
+                        id = obj.Id,
+                        numero = obj.client.NumeroCompte,
+                        type = obj.type,
+                        etat = obj.etat,
+                        date = obj.dateDemande,
+                    });
+            }
+            return Ok(dem);
         }
 
         // GET api/<DemandeCarteController>/5
@@ -41,7 +57,7 @@ namespace JwtAuthDemo.Controllers
             DemandeCarte demandeCarte = new DemandeCarte();
             demandeCarte.client = _context.Client.Find(id);
             demandeCarte.dateDemande = DateTime.Now;
-            demandeCarte.etat = "En cours";
+            demandeCarte.etat = "En attente";
             demandeCarte.type = type;
             _context.DemandeCartes.Add(demandeCarte);
             _context.SaveChanges();

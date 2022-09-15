@@ -5,4 +5,5 @@ export class Transfert {
   nom:any;
   prenom:any;
   date:any;
+  ribDebiteur:any;
 }

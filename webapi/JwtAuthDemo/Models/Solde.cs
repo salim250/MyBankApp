@@ -15,7 +15,7 @@ namespace JwtAuthDemo.Models
         public string operation { get; set; }
         public int montantRetire { get; set; }
         public int montantVerse { get; set; }
-        
+        [JsonIgnore]
         public Client client { get; set; }
     }
 }

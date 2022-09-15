@@ -40,6 +40,7 @@ import {TransfertComponent} from "./pages/EspaceClient/transfert/transfert.compo
 import {ClientComponent} from "./espaceAdmin/client/client.component";
 import {TransfertsComponent} from "./pages/espaceAgent/transferts/transferts.component";
 import {MAJDemandeComponent} from "./pages/espaceAgent/majdemande/majdemande.component";
+import {HistoriqueTransfertComponent} from "./espaceAgent/historique-transfert/historique-transfert.component";
 
 const routes: Routes = [
   { path: '', component: PagesLoginComponent },
@@ -54,7 +55,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'transferts', component: TransfertsComponent },
   { path: 'MAJDemande', component: MAJDemandeComponent },
-  { path: 'historiqueTransferts', component: TransfertsComponent },
+  { path: 'historiqueTransferts', component: HistoriqueTransfertComponent },
   { path: 'traiterDemande', component: MAJDemandeComponent },
   { path: 'charts-chartjs', component: ChartsChartjsComponent },
   { path: 'form-editors', component: FormsEditorsComponent },

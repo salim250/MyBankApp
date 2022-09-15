@@ -37,7 +37,7 @@ export class MAJDemandeComponent implements OnInit {
    this.etat = etat;
    this.id = id;
     this.test = name;
-    console.log(this.etat)
+    console.log(this.id)
   }
 
   updateEtat(etat:any) {

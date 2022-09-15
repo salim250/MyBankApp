@@ -1,6 +1,7 @@
 export class Demande {
   id:any
-  dateDemande!:Date;
+  numero:any
+  date!:Date;
   type!:string;
   etat!:string;
   nombre!:string;
